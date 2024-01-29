@@ -41,6 +41,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
 	"guns/xterm-color-table.vim",
+	"nvim-telescope/telescope.nvim",
 	"jamessan/vim-gnupg",
 	"Civitasv/cmake-tools.nvim",
 	"neovim/nvim-lspconfig",
@@ -52,7 +53,8 @@ require("lazy").setup({
 	"hrsh7th/cmp-cmdline",
 	"hrsh7th/nvim-cmp",
 	"emileferreira/nvim-strict",
-	"nvim-telescope/telescope.nvim",
+	"numToStr/Comment.nvim",
+	"nvim-lualine/lualine.nvim",
 }, {
 	install = {
 		--colorscheme = {
@@ -205,5 +207,15 @@ require("strict").setup({
 	-- I prefer the default highlight.
 	todos = {
 		highlight = false,
+	},
+})
+
+require("Comment").setup() -- this sets the gcc/gbc keybindings.
+
+require("lualine").setup({
+	options = {
+		theme = "dracula", -- assumes light theme
+		section_separators = { left = "|", right = "|"},
+		component_separators = { left = "|", right = "|"},
 	},
 })
