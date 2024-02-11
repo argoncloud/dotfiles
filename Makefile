@@ -1,4 +1,4 @@
-all: 
+all:
 	cd home; stow --verbose --target=$${HOME} --restow */
 
 delete:
