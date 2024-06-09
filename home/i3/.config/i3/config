@@ -13,7 +13,7 @@ set $mod Mod1
 #set $ctrl Control
 
 # font for window titles. ISO 10646 = Unicode
-font xft:Droid Sans Mono 8
+font xft:Liberation Mono 15
 
 # do not write either window title or border
 default_border none
@@ -31,7 +31,7 @@ bindsym $mod+Return exec konsole
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -fn 'Liberation Mono-15'
 bindsym $mod+c exec firefox
 
 # change focus
